@@ -1,0 +1,28 @@
+CREATE TABLE transaction_details (
+    trans_id VARCHAR(255) PRIMARY KEY,
+    client_id VARCHAR(255),
+    account_id VARCHAR(255),
+    date DATE,
+    type VARCHAR(20),
+    operation VARCHAR(50),
+    amount DECIMAL(10,2),
+    balance DECIMAL(10,2),
+    k_symbol VARCHAR(20),
+    bank VARCHAR(20),
+    account VARCHAR(255),
+    tran_desc VARCHAR(255),
+    month_id INT
+) AS SELECT trans_id,
+    client_id,
+    account_id,
+    date,
+    type,
+    operation,
+    amount,
+    balance,
+    k_symbol,
+    bank,
+    account,
+    tran_desc,
+    month_id
+    FROM CSVREAD('C:\Users\sicha\GIT\Pyspark_demo\data\client_trans_details.csv')

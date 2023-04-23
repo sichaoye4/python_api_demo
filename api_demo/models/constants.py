@@ -1,0 +1,7 @@
+CLIENT_LOAN_SUMMARY_NAME = "client_loan_summary_p12"
+CLIENT_TRANS_SUMMARY_NAME = "client_trans_summary_p12"
+LOAN_DETAILS_NAME = "loan_details_p12"
+TRANSACTION_DETAILS_NAME = "transaction_details_p12"
+H2_DRIVER = r"C:\Program Files (x86)\H2\bin\h2-2.1.214.jar"
+DB_URL = "jdbc:h2:tcp://localhost/~/test"
+DB_USER="test"
