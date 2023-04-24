@@ -13,9 +13,12 @@ from models.client_trans_summary import ClientTransSummarySchema
 from models.constants import *
 from utils.decrypt_util import decrypt_db_password
 from utils.utils import read_txt_file_as_single_line, CustomJsonEncoder
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
+
 # get path to encrypted password file
 pwd = decrypt_db_password(read_txt_file_as_single_line(app, "static/encrypted.txt"))
 connection = jaydebeapi.connect(
