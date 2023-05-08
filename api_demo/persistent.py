@@ -33,6 +33,7 @@ def get_all_from_summary_by_month_id(connection: jaydebeapi.Connection, month_id
     if not month_id.isdigit():
         raise ValueError("Month ID must be a Integer")
     query = f"SELECT * FROM {table_name} WHERE month_id = {int(month_id)}"
+    print(query)
     return execute(query, connection, schema)
 
 # get count of a table
